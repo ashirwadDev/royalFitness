@@ -28,7 +28,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-[#0a0a0a] to-[#150000] text-center px-6">
+    <section className="py-20 bg-gradient-to-b from-black via-[#0a0a0a] to-[#150000] text-center px-6 ">
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

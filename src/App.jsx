@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Hero from "./components/Hero";
@@ -6,8 +6,13 @@ import Services from "./components/Services";
 import Trainers from "./components/Trainers";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
-
+import IntroAnimation from './components/IntroAnimation'
 export default function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  if (showIntro) {
+    return <IntroAnimation onFinish={() => setShowIntro(false)} />;
+  }
   return (
     <Layout>
       <Routes>

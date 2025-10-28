@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables & body gradient (direct codes) */
+:root{
+  --rf-red: #ff0000;
+  --rf-dark: #0a0a0a;
+  --rf-deep: #100000;
+  --rf-white: #ffffff;
+}
+
+/* gradient background */
+body {
+  background: linear-gradient(180deg, #0a0a0a 0%, #100000 60%);
+  color: var(--rf-white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+}
+
+/* card look */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* helpers */
+.img-cover { width:100%; height:100%; object-fit:cover; display:block; }
+.container-max { max-width: 76rem; margin-left:auto; margin-right:auto; padding-left:1rem; padding-right:1rem; }
+.focus-ring:focus { outline: none; box-shadow: 0 0 0 4px rgba(255,0,0,0.12); border-radius: .5rem; }
+
+/* mobile hero CTA stack */
+@media (max-width: 640px) {
+  .hero-cta { flex-direction: column; gap: 0.6rem; }
+  .hero-cta a { width: 100%; justify-content: center; }
+}
+
+/* ensure footer visible */
+.site-footer { background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(16,0,0,0.6)); border-top: 1px solid rgba(255,255,255,0.04); }
